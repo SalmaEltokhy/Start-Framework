@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'flowbite-react';
+
+
+.row{
+    @apply flex flex-wrap py-5 px-5
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+  }
+  .grid {
+    gap: 1rem;
+  }
+ .img {
+    width: 50%;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+  }
+  .img:hover {
+    transform:scale(1.05);
+  }
