@@ -63,3 +63,8 @@ padding-inline:5% ;
 .model{
 width: 45%;
 }
+.mode{
+
+  background-color: #0D6EFD;
+  opacity: .25;
+}

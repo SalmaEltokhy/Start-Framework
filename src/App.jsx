@@ -8,12 +8,12 @@ import Layout from './component/Layout/Layout'
 import Portfolio from './component/Portfolio/Portfolio'
 import Contact from './component/Contact/Contact'
 import Notfound from './component/Notfound/Notfound'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 
 
 
-let x = createBrowserRouter([
-  {path : '' , element :<Layout/> , children:[
+let x = createHashRouter([
+  {path : '/' , element :<Layout/> , children:[
     {index:true , element:<Home/>},
     {path : 'about' , element:<About/>},
     {path : 'contact' , element:<Contact/>},

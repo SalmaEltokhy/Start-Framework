@@ -62,31 +62,51 @@ export default function Portfolio() {
 </div>
 
 
-<div className='App p-4'>
+<div className='App p-4 relative'>
 <div className="grid gap-4 grid-cols-2 md:grid-cols-3">
-        {images.map((image, index) => (
+        {images.map((image, index) => ( <div className='relative overflow-hidden rounded-lg' key={index}  onClick={() => openModal(index)}>
+         
           <img
             key={index}
             src={image}
             alt={`img-${index}`}
-            className="cursor-pointer rounded-lg py-2"
-            onClick={() => openModal(index)} />
+            className="cursor-pointer rounded-lg w-full"
+            />
+                
+            <div className='layer absolute top-0 left-0 right-0 bottom-0 text-center flex items-center justify-center border rounded-lg'>
+              <i className='text-white fa-solid fa-plus fa-5x '></i>
+
+            </div>
+          </div>
+          
         ))}
       </div>
-      <Modal show={modalIsOpen} size="xl" onClose={closeModal} className='md:w-[40%] mx-auto w-[60%] '>
-        <Modal.Header>
-          <div className="flex justify-between gap-2">
-            <Button onClick={prevImage}>Prev</Button>
-            <Button onClick={nextImage}>Next</Button>
-          </div>
-        </Modal.Header>
-        <Modal.Body>
-          <img src={images[currentImageIndex]} alt={`img-${currentImageIndex}`} className="w-full h-auto rounded-lg" />
-        </Modal.Body>
-       
-      </Modal>
+
+  {modalIsOpen?  <div className="fixed inset-0 z-0 mode">
+        </div>: false }
+
+   <Modal show={modalIsOpen} size="xl" onClose={closeModal} className='md:w-[40%] mx-auto w-[60%] z-auto'>
+
+      
+    <Modal.Header>
+        <div className="flex justify-between gap-2">
+          <Button onClick={prevImage}>Prev</Button>
+          <Button onClick={nextImage}>Next</Button>
+        </div>
+      </Modal.Header>
+      <Modal.Body>
+   
+      <img src={images[currentImageIndex]} alt={`img-${currentImageIndex}`} className="w-full h-auto rounded-lg z-auto" />
+
+      </Modal.Body>
 
 
+
+
+
+    </Modal>
+    
+     
 
 </div>
 
