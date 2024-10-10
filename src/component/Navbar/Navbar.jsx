@@ -17,7 +17,7 @@ export default function Navbar() {
   <nav className="border-gray-200 dark:bg-slate-700 fixed top-0 left-0 right-0 z-50 py-2 text-white">
   <div className="max-w-screen-xl md:flex flex-wrap items-center md:justify-between p-4 px-3 mx-10 relative">
     <Link to="" className="flex items-center space-x-3 rtl:space-x-reverse uppercase">
- <span className="self-center text-3xl font-bold whitespace-nowrap dark:text-white">Start Framework
+ <span className="self-center text-xl md:text-3xl font-bold whitespace-nowrap dark:text-white">Start Framework
 </span>
     </Link>
     
@@ -39,7 +39,7 @@ export default function Navbar() {
       </ul>
     </div>
     <div className='block md:hidden'>
-      <i onClick={toggle} className={`fa-solid ${!open?'fa-bars':'fa-close'} fa-2x absolute top-4 right-2 cursor-pointer`}></i>
+      <i onClick={toggle} className={`fa-solid ${!open?'fa-bars':'fa-close'} fa-2x absolute top-4 right-0 cursor-pointer `}></i>
 
         </div>
   </div>

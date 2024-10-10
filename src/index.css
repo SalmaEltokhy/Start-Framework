@@ -5,22 +5,14 @@
 
 
 .row{
-    @apply flex flex-wrap py-5 px-5
+    @apply flex flex-wrap py-10 px-10
 }
 
-.App {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-   
-  }
   .grid {
     gap: 1rem;
   }
  .img {
     width: 50%;
-    height: auto;
     transition: transform 0.2s ease-in-out;
   }
   .img:hover {

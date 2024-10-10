@@ -3,6 +3,8 @@ import styel from './Footer.module.css'
 
 export default function Footer() {
   return <>
+
+
  <footer className='relative bottom-0 left-0 right-0 text-white bg-slate-800'>
 
 
